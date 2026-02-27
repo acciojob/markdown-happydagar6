@@ -1,12 +1,51 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
+/* Reset basic margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+/* Main Container */
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* Loading Indicator */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Markdown Input Area */
+.textarea {
+  flex: 1;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-right: 2px solid #ccc;
+  resize: none;
+  background-color: #282c34;
+  color: #fff;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+/* Markdown Preview Area */
+.preview {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  color: #333;
 }
