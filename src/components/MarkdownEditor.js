@@ -4,7 +4,8 @@ import ReactMarkdown from "react-markdown";
 const MarkdownEditor = () => {
     const [markdownInput, setMarkdownInput] = useState("");
     const [previewContent, setPreviewContent] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
+    
+    const [isLoading, setIsLoading] = useState(true);
 
     // Initial load simulation to satisfy the loading class
     useEffect(() => {
@@ -26,14 +27,16 @@ const MarkdownEditor = () => {
 
     return (
         <>
-            <textarea className="textarea" value={markdownInput}
-            onChange={(event) => setMarkdownInput(event.target.value)}
-            placeholder="Type your markdown here... (e.g., # Hello World"
-            >
-                <div className="preview">
-                    <ReactMarkdown>{previewContent}</ReactMarkdown>
-                </div>
-            </textarea>
+            <textarea 
+                className="textarea" 
+                value={markdownInput}
+                onChange={(event) => setMarkdownInput(event.target.value)}
+                placeholder="Type your markdown here... (e.g., # Hello World)"
+            />
+            
+            <div className="preview">
+                <ReactMarkdown>{previewContent}</ReactMarkdown>
+            </div>
         </>
     )
 }
